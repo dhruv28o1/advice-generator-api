@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+:root{
+    --mobile:373px;
+
+    /* _________Color_________ */
+    --text-light:hsl(193, 38%, 86%); 
+    --text-green:hsl(150, 100%, 66%);
+    --line:hsl(217, 19%, 38%);
+    --bg-card:hsl(217, 19%, 24%);
+    --bg-dark:hsl(218, 23%, 16%);
+
+    /* ___________Typography____________ */
+    --quote-fs:28px;
+    --f-family:'Manrope', sans-seri;
+}
+
+/* _________utility classes_________ */
+.d-flex{
+    display: flex;
+}
+.center{
+    align-items: center;
+    justify-content: center;
+}
+/* _____svg_____ */
+.svg svg{
+    display: none;
+}
+
+
+
+
+/* ____________style start__________________ */
+*{
+    margin: 0;
+    padding: 0;
+  
+}
+html,body{
+    height: 100%;
+}
+body{
+    background: var(--bg-dark);
+    flex-direction: column;
+    text-align: center;
+    font-family: var(--f-family);
+    font-weight: 800;
+}
+
+/* __________attributation___________ */
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* ______________container______________ */
+.container{
+    background: var(--bg-card);
+    padding: 0px 1em;
+    width: 444px;
+    margin: 2em;
+    border-radius: 1em;
+
+}
+.svg svg:first-child{
+    display: block;
+}
+/* _________advice________ */
+#advice_id{
+    letter-spacing: 2px;
+    color: var(--text-green);
+    font-size: medium;
+    margin: 2em 0px 0px;
+}
+#advice{
+    margin: 0.5em 0px 1em;
+    color: var(--text-light);
+    font-size: var(--quote-fs);
+}
+
+.button{
+    cursor: pointer;
+    box-sizing: content-box;
+    height: 3.5em;
+    border-radius:100%;
+    margin: 0px auto;
+    width: 3.5em;
+    background: var(--text-green);
+    transform: translate(0px,1.6em);
+}
+.button:hover{
+    box-shadow: 0 0 2em 1px  var(--text-green);
+}
+
+
+@media screen and (max-width:444px) {
+
+    .container{
+        width:295px;
+    }
+    .svg svg:nth-child(2){
+        display: block;
+    }
+    .svg svg:nth-child(1){
+        display: none;
+    }
+}
+
